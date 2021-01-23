@@ -13,4 +13,15 @@ public class MyBookShopAppApplication {
 		SpringApplication.run(MyBookShopAppApplication.class, args);
 
 	}
+
+	private JdbcTemplate jdbcTemplate;
+
+	@Autowired
+	public MyBookShopAppApplication(JdbcTemplate jdbcTemplate) {
+
+		this.jdbcTemplate = jdbcTemplate;
+
+		jdbcTemplate.update("INSERT INTO authors(author_name) SELECT author FROM books ");
+
+	}
 }

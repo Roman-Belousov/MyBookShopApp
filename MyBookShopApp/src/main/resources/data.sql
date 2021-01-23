@@ -24,29 +24,5 @@ insert into books (author, title, priceOld, price) values ('Helyn Schneidar', 'u
 insert into books (author, title, priceOld, price) values ('Bette-ann Askem', 'e-enable dot-com supply-chains', '$297.83', '$110.15');
 insert into books (author, title, priceOld, price) values ('Dom Robuchon', 'facilitate efficient eyeballs', '$232.30', '$131.48');
 
--- insert into authors (book_id,book_author) values (1,'Drucie Goodbourn');
--- insert into authors (book_id,book_author) values (2,'Marcia Aggiss');
--- insert into authors (book_id,book_author) values (3,'Giovanni Bigg');
--- insert into authors (book_id,book_author) values (4,'Duffie Eynon');
--- insert into authors (book_id,book_author) values (5,'Anselma McKennan');
--- insert into authors (book_id,book_author) values (6,'Gert Kira');
--- insert into authors (book_id,book_author) values (7,'Clerc Djakovic');
--- insert into authors (book_id,book_author) values (8,'Stacee Elsy');
--- insert into authors (book_id,book_author) values (9,'Dorotea Bonhill');
--- insert into authors (book_id,book_author) values (10,'Minni Bunney');
--- insert into authors (book_id,book_author) values (11,'Berty Gandley');
--- insert into authors (book_id,book_author) values (12,'Raynard Tesdale');
--- insert into authors (book_id,book_author) values (13,'Joanna Hutfield');
--- insert into authors (book_id,book_author) values (14,'Dannie Glidder');
--- insert into authors (book_id,book_author) values (15,'Timmie Adshede');
--- insert into authors (book_id,book_author) values (16,'Fernando Neads');
--- insert into authors (book_id,book_author) values (17,'Teddy Guilliland');
--- insert into authors (book_id,book_author) values (18,'Paloma Grebert');
--- insert into authors (book_id,book_author) values (19,'Kristos Usher');
--- insert into authors (book_id,book_author) values (20,'Darcey Rohmer');
--- insert into authors (book_id,book_author) values (21,'Cristie Isacsson');
--- insert into authors (book_id,book_author) values (22,'Lindsay Coutthart');
--- insert into authors (book_id,book_author) values (23,'Helyn Schneidar');
--- insert into authors (book_id,book_author) values (24,'Bette-ann Askem');
--- insert into authors (book_id,book_author) values (25,'Dom Robuchon');
+
 

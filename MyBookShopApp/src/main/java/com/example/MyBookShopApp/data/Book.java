@@ -7,6 +7,15 @@ public class Book {
     private String title;
     private String priceOld;
     private String price;
+    private Integer authors_id;
+
+    public Integer getAuthors_id() {
+        return authors_id;
+    }
+
+    public void setAuthors_id(Integer authors_id) {
+        this.authors_id = authors_id;
+    }
 
     public Integer getId() {
         return id;
@@ -56,6 +65,7 @@ public class Book {
                 ", title='" + title + '\'' +
                 ", priceOld='" + priceOld + '\'' +
                 ", price='" + price + '\'' +
+                ", authors_id=" + authors_id +
                 '}';
     }
 }

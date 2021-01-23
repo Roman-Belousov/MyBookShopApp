@@ -7,6 +7,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.sql.SQLException;
+
 @Controller
 @RequestMapping("/bookshop")
 public class MainPageController {
@@ -30,8 +32,12 @@ public class MainPageController {
     }
 
     @GetMapping("/author")
-    public String authorPage(Model model) {
-        model.addAttribute("authorData",bookService.getAuthorData());
+    public String authorPage(Model model) throws SQLException {
+        try {
+            model.addAttribute("authorData",bookService.getAuthorData());
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
         return "author";
     }
 }
