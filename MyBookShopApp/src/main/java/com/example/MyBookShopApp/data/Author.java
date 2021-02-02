@@ -1,6 +1,10 @@
 package com.example.MyBookShopApp.data;
 
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 public class Author {
 
     private Integer id;
@@ -30,7 +34,6 @@ public class Author {
                 '}';
     }
 }
-
 
 
 
