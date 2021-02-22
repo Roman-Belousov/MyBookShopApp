@@ -25,15 +25,15 @@ public class BookService {
     }
 
 
-    @PostConstruct
-    public void setAuthorId() throws SQLException {
-
-        String query = "UPDATE books SET authors_id = (SELECT authors.id FROM authors WHERE books.author = authors.author_name)  WHERE id > 0";
-        Connection connection = jdbcTemplate.getDataSource().getConnection();
-        PreparedStatement preparedStatement = connection.prepareStatement(query);
-        preparedStatement.executeUpdate();
-
-    }
+//    @PostConstruct
+//    public void setAuthorId() throws SQLException {
+//
+//        String query = "UPDATE books SET authors_id = (SELECT authors.id FROM authors WHERE books.author = authors.author_name)  WHERE id > 0";
+//        Connection connection = jdbcTemplate.getDataSource().getConnection();
+//        PreparedStatement preparedStatement = connection.prepareStatement(query);
+//        preparedStatement.executeUpdate();
+//
+//    }
 
 
     public List<Book> getBooksData() {
@@ -52,19 +52,19 @@ public class BookService {
         return new ArrayList<>(books);
     }
 
-    public List<Author> getAuthorData() throws SQLException {
-
-        List<Author> authors = jdbcTemplate.query(" SELECT * FROM authors", (ResultSet rs, int rowNum) -> {
-            Author author = new Author();
-            author.setAuthor_name(rs.getString("author_name"));
-
-            return author;
-        });
-
-        Map<String, List<Author>> map = authors.stream().collect(Collectors.groupingBy((Author author) -> author.getAuthor_name().substring(0, 1)));
-
-        return new ArrayList<>(authors);
-    }
+//    public List<Author> getAuthorData() throws SQLException {
+//
+//        List<Author> authors = jdbcTemplate.query(" SELECT * FROM authors", (ResultSet rs, int rowNum) -> {
+//            Author author = new Author();
+//            author.setAuthor_name(rs.getString("author_name"));
+//
+//            return author;
+//        });
+//
+//        Map<String, List<Author>> map = authors.stream().collect(Collectors.groupingBy((Author author) -> author.getAuthor_name().substring(0, 1)));
+//
+//        return new ArrayList<>(authors);
+//    }
 }
 
 

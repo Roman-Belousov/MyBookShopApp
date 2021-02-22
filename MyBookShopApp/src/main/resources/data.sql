@@ -23,8 +23,3 @@ insert into books (author, title, priceOld, price) values ('Lindsay Coutthart', 
 insert into books (author, title, priceOld, price) values ('Helyn Schneidar', 'utilize magnetic supply-chains', '$279.70', '$77.86');
 insert into books (author, title, priceOld, price) values ('Bette-ann Askem', 'e-enable dot-com supply-chains', '$297.83', '$110.15');
 insert into books (author, title, priceOld, price) values ('Dom Robuchon', 'facilitate efficient eyeballs', '$232.30', '$131.48');
-insert into books (author, title, priceOld, price) values ('Elizabeth Tailor', 'Sweet box', '$237.30', '$135.48');
-insert into books (author, title, priceOld, price) values ('Ingman Bergman', 'My life in Film', '$217.30', '$115.48');
-
-
-

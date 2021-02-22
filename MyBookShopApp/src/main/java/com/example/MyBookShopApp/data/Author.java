@@ -8,7 +8,8 @@ import java.util.stream.Collectors;
 public class Author {
 
     private Integer id;
-    private String author_name;
+    private String firstName;
+    private String lastName;
 
     public Integer getId() {
         return id;
@@ -18,22 +19,34 @@ public class Author {
         this.id = id;
     }
 
-    public String getAuthor_name() {
-        return author_name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setAuthor_name(String author_name) {
-        this.author_name = author_name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     @Override
     public String toString() {
         return "Author{" +
                 "id=" + id +
-                ", author_name='" + author_name + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
                 '}';
     }
 }
+
+
+
 
 
 
