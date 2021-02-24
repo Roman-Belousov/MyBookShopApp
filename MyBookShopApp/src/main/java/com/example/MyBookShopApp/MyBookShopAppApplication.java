@@ -14,14 +14,4 @@ public class MyBookShopAppApplication {
 
 	}
 
-//	private JdbcTemplate jdbcTemplate;
-//
-//	@Autowired
-//	public MyBookShopAppApplication(JdbcTemplate jdbcTemplate) {
-//
-//		this.jdbcTemplate = jdbcTemplate;
-//
-//		jdbcTemplate.update("INSERT INTO authors(author_name) SELECT author FROM books ");
-//
-//	}
 }
