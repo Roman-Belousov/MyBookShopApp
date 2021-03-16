@@ -15,14 +15,15 @@ public class AuthorsController {
 
     private final AuthorService authorService;
 
-@Autowired
+    @Autowired
     public AuthorsController(AuthorService authorService) {
         this.authorService = authorService;
     }
-@ModelAttribute("authorsMap")
-public Map<String,List<Author>> authorsMap(){
-    return authorService.getAuthorsMap();
-}
+
+    @ModelAttribute("authorsMap")
+    public Map<String, List<Author>> authorsMap() {
+        return authorService.getAuthorsData();
+    }
 
     @GetMapping("/authors")
     public String authorsPage() {

@@ -1,5 +1,6 @@
 package com.example.MyBookShopApp.config;
 
+import com.example.MyBookShopApp.data.AuthorRepository;
 import com.example.MyBookShopApp.data.BookRepository;
 import com.example.MyBookShopApp.data.TestEntity;
 import com.example.MyBookShopApp.data.TestEntityCrudRepository;
@@ -20,11 +21,12 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
 
     TestEntityCrudRepository testEntityCrudRepository;
     BookRepository bookRepository;
+    AuthorRepository authorRepository;
 
-    @Autowired
-    public CommandLineRunnerImpl(TestEntityCrudRepository testEntityCrudRepository, BookRepository bookRepository) {
+    public CommandLineRunnerImpl(TestEntityCrudRepository testEntityCrudRepository, BookRepository bookRepository, AuthorRepository authorRepository) {
         this.testEntityCrudRepository = testEntityCrudRepository;
         this.bookRepository = bookRepository;
+        this.authorRepository = authorRepository;
     }
 
     @Override
@@ -49,8 +51,8 @@ public class CommandLineRunnerImpl implements CommandLineRunner {
 
         deleteTestEntityById(4L);
 
-        Logger.getLogger(CommandLineRunnerImpl.class.getSimpleName()).info(bookRepository.findBooksByAuthor_FirstName("Mélanie").toString());
-        Logger.getLogger(CommandLineRunnerImpl.class.getSimpleName()).info(bookRepository.customFindAllBooks(JpaSort.unsafe("LENGTH(title)")).toString());
+        Logger.getLogger(CommandLineRunnerImpl.class.getSimpleName()).info(bookRepository.findBooksByAuthor_FirstName("Denyse").toString());
+
 
     }
 
