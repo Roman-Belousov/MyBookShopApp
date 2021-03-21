@@ -1,12 +1,10 @@
-package com.example.MyBookShopApp.data;
+package com.example.MyBookShopApp.data.repository;
 
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.repository.JpaRepository;
+import com.example.MyBookShopApp.data.dto.Author;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 
-import javax.persistence.NamedQuery;
 import java.util.List;
 
 

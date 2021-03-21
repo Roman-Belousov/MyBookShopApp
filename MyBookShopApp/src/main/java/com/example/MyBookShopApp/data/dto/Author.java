@@ -1,4 +1,4 @@
-package com.example.MyBookShopApp.data;
+package com.example.MyBookShopApp.data.dto;
 
 
 import javax.persistence.*;
@@ -15,6 +15,9 @@ public class Author {
     private Integer id;
     private String firstName;
     private String lastName;
+    private String slug;
+    private String foto;
+    private  String description;
 
     @OneToMany(mappedBy = "author")
 
@@ -50,6 +53,30 @@ public class Author {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public String getSlug() {
+        return slug;
+    }
+
+    public void setSlug(String slug) {
+        this.slug = slug;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override

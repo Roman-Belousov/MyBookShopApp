@@ -1,17 +1,12 @@
-package com.example.MyBookShopApp.data;
+package com.example.MyBookShopApp.data.service;
 
+import com.example.MyBookShopApp.data.dto.Book;
+import com.example.MyBookShopApp.data.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.PostConstruct;
-import java.sql.*;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 @Component
 @Service

@@ -1,9 +1,8 @@
-package com.example.MyBookShopApp.data;
+package com.example.MyBookShopApp.data.repository;
 
-import org.springframework.data.domain.Sort;
+import com.example.MyBookShopApp.data.dto.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;
 
