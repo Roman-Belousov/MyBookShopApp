@@ -1,6 +1,8 @@
 package com.example.MyBookShopApp.data.dto;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "genres")
@@ -12,6 +14,9 @@ public class Genre {
     private Integer parent_id;
     private String slug;
     private String name;
+
+    @ManyToMany(mappedBy="genres")
+    private Set<Book> books = new HashSet<Book>();
 
     public Integer getId() {
         return id;

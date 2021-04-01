@@ -3,7 +3,9 @@ package com.example.MyBookShopApp.data.dto;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -19,7 +21,7 @@ public class Author {
     private String foto;
     private  String description;
 
-    @OneToMany(mappedBy = "author")
+    @OneToMany(mappedBy = "authors")
 
     private List<Book> bookList = new ArrayList<>();
 
@@ -31,9 +33,9 @@ public class Author {
         this.bookList = bookList;
     }
 
-    public Integer getId() {
-        return id;
-    }
+    @ManyToMany(mappedBy="authors")
+    private Set<Book> books = new HashSet<Book>();
+
 
     public void setId(Integer id) {
         this.id = id;

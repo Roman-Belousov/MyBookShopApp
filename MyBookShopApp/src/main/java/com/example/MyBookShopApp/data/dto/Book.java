@@ -3,9 +3,7 @@ package com.example.MyBookShopApp.data.dto;
 import com.example.MyBookShopApp.data.dto.Author;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Entity
 @Table(name = "books")
@@ -34,6 +32,18 @@ public class Book {
     public List<BookReview> getBookReviews() {
         return bookReviews;
     }
+
+    @ManyToMany(cascade = {CascadeType.ALL})
+    @JoinTable(name = "book2author",
+            joinColumns = {@JoinColumn(name = "book_id")},
+            inverseJoinColumns = {@JoinColumn(name = "author_id")})
+    private Set<Author> authors = new HashSet<Author>();
+
+    @ManyToMany(cascade = {CascadeType.ALL})
+    @JoinTable(name = "book2genre",
+            joinColumns = {@JoinColumn(name = "book_id")},
+            inverseJoinColumns = {@JoinColumn(name = "genre_id")})
+    private Set<Genre> genres = new HashSet<Genre>();
 
     public Integer getId() {
         return id;

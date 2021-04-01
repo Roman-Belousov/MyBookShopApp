@@ -1,6 +1,6 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-4.1.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
-    <changeSet author="Молотки (generated)" id="1616350123175-1">
+    <changeSet author="Молотки (generated)" id="1616433260331-1">
         <createTable tableName="authors">
             <column autoIncrement="true" name="id" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="authors_pkey"/>
@@ -12,7 +12,7 @@
             <column name="slug" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-2">
+    <changeSet author="Молотки (generated)" id="1616433260331-2">
         <createTable tableName="book_reviews">
             <column autoIncrement="true" name="id" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="book_reviews_pkey"/>
@@ -23,7 +23,7 @@
             <column name="user_id" type="INTEGER"/>
         </createTable>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-3">
+    <changeSet author="Молотки (generated)" id="1616433260331-3">
         <createTable tableName="books">
             <column autoIncrement="true" name="id" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="books_pkey"/>
@@ -40,7 +40,7 @@
             <column name="author_id" type="INTEGER"/>
         </createTable>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-4">
+    <changeSet author="Молотки (generated)" id="1616433260331-4">
         <createTable tableName="documents">
             <column autoIncrement="true" name="id" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="documents_pkey"/>
@@ -51,7 +51,7 @@
             <column name="title" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-5">
+    <changeSet author="Молотки (generated)" id="1616433260331-5">
         <createTable tableName="faqs">
             <column autoIncrement="true" name="id" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="faqs_pkey"/>
@@ -61,7 +61,7 @@
             <column name="sort_index" type="INTEGER"/>
         </createTable>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-6">
+    <changeSet author="Молотки (generated)" id="1616433260331-6">
         <createTable tableName="user_contact">
             <column autoIncrement="true" name="id" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="user_contact_pkey"/>
@@ -75,7 +75,7 @@
             <column name="user_id" type="INTEGER"/>
         </createTable>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-7">
+    <changeSet author="Молотки (generated)" id="1616433260331-7">
         <createTable tableName="users">
             <column autoIncrement="true" name="id" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="users_pkey"/>
@@ -86,7 +86,7 @@
             <column name="reg_time" type="TIMESTAMP WITHOUT TIME ZONE"/>
         </createTable>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-8">
+    <changeSet author="Молотки (generated)" id="1616433260331-8">
         <createTable tableName="genres">
             <column autoIncrement="true" name="id" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="genres_pkey"/>
@@ -96,7 +96,7 @@
             <column name="slug" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-9">
+    <changeSet author="Молотки (generated)" id="1616433260331-9">
         <createTable tableName="massages">
             <column autoIncrement="true" name="id" type="INTEGER">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="massages_pkey"/>
@@ -109,7 +109,7 @@
             <column name="user_id" type="INTEGER"/>
         </createTable>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-10">
+    <changeSet author="Молотки (generated)" id="1616433260331-10">
         <createTable tableName="test_entities">
             <column autoIncrement="true" name="id" type="BIGINT">
                 <constraints nullable="false" primaryKey="true" primaryKeyName="test_entities_pkey"/>
@@ -117,16 +117,16 @@
             <column name="data" type="VARCHAR(255)"/>
         </createTable>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-11">
+    <changeSet author="Молотки (generated)" id="1616433260331-11">
         <addForeignKeyConstraint baseColumnNames="author_id" baseTableName="books" constraintName="fkfjixh2vym2cvfj3ufxj91jem7" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="authors" validate="true"/>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-12">
+    <changeSet author="Молотки (generated)" id="1616433260331-12">
         <addForeignKeyConstraint baseColumnNames="book_id" baseTableName="book_reviews" constraintName="fkcm2shivx19spbg0flc47mcrs1" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="books" validate="true"/>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-13">
+    <changeSet author="Молотки (generated)" id="1616433260331-13">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="book_reviews" constraintName="fkon3wfhxgwpfu7kl1wu54mw78u" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="users" validate="true"/>
     </changeSet>
-    <changeSet author="Молотки (generated)" id="1616350123175-14">
+    <changeSet author="Молотки (generated)" id="1616433260331-14">
         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_contact" constraintName="fkigqfory4r46pqd0sl4csnwp72" deferrable="false" initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION" referencedColumnNames="id" referencedTableName="users" validate="true"/>
     </changeSet>
 </databaseChangeLog>
