@@ -1,12 +1,13 @@
 package com.example.MyBookShopApp.data.dto;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Entity
 @Table(name = "user_contact")
 public class UserContact {
-
+    public static final SimpleDateFormat SDF = new SimpleDateFormat("dd-MM-yyyy hh:mm");
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

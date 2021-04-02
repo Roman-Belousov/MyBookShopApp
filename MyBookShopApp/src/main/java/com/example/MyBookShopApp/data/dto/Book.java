@@ -3,12 +3,14 @@ package com.example.MyBookShopApp.data.dto;
 import com.example.MyBookShopApp.data.dto.Author;
 
 import javax.persistence.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
+
 
 @Entity
 @Table(name = "books")
 public class Book {
-
+public static final SimpleDateFormat SDF = new SimpleDateFormat("yyyy-MM-dd");
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
@@ -139,7 +141,7 @@ public class Book {
                 "id=" + id +
                 ", author=" + author +
                 ", title='" + title + '\'' +
-                ", pub_date=" + pub_date +
+                ", pub_date=" + SDF.format(pub_date) +
                 ", is_bestseller=" + is_bestseller +
                 ", slug='" + slug + '\'' +
                 ", image='" + image + '\'' +
@@ -147,6 +149,9 @@ public class Book {
                 ", discount=" + discount +
                 ", priceOld='" + priceOld + '\'' +
                 ", price='" + price + '\'' +
+                ", bookReviews=" + bookReviews +
+                ", authors=" + authors +
+                ", genres=" + genres +
                 '}';
     }
 }
