@@ -1,5 +1,6 @@
 package com.example.MyBookShopApp.controllers;
 
+import com.example.MyBookShopApp.data.RecommendedBooksPageDto;
 import com.example.MyBookShopApp.data.dto.Book;
 import com.example.MyBookShopApp.data.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +21,7 @@ public class MainPageController {
 
     @ModelAttribute("recommendedBooks")
     public List<Book> recommendedBooks(){
-        return bookService.getBooksData();
+        return bookService.getPageOfRecommendedBooks(0,6).getContent();
     }
 
     @ModelAttribute("newsBooks")
@@ -38,6 +39,13 @@ public class MainPageController {
 
         return "index";
     }
+
+    @GetMapping("/books/recommended")
+    @ResponseBody
+    public RecommendedBooksPageDto getBooksPage(@RequestParam("offset") Integer offset, @RequestParam("limit") Integer limit){
+        return new RecommendedBooksPageDto(bookService.getPageOfRecommendedBooks(offset,limit).getContent());
+    }
+
     @GetMapping("/recent")
     public String recentPage() {
 
