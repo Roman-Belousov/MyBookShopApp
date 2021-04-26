@@ -2,6 +2,8 @@ package com.example.MyBookShopApp.data.repository;
 
 import com.example.MyBookShopApp.data.dto.Book;
 import liquibase.pro.packaged.B;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
@@ -28,5 +30,13 @@ List<Book> getBestsellers();
 
 @Query(value = "SELECT * FROM books WHERE discount = (SELECT MAX (discount) FROM books)", nativeQuery=true)
     List<Book> getBookWithMaxDiscount();
+
+Page<Book> findBooksByTitleContaining(String bookTitle, Pageable nextPage);
+
+
+    @Query(value = "SELECT * FROM books ORDER BY pub_date DESC", nativeQuery=true)
+    Page<Book> getBookWithRecentPubDate(Pageable nextPage);
+
+
 
 }

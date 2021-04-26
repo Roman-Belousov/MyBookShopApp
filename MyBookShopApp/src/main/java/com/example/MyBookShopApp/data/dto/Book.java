@@ -4,6 +4,7 @@ import com.example.MyBookShopApp.data.dto.Author;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.text.SimpleDateFormat;
@@ -31,6 +32,7 @@ public class Book {
 
     @Column(name = "pub_date")
     @ApiModelProperty("date of book publication")
+    @Temporal(TemporalType.DATE)
     private Date pubDate;
 
     @Column(name = "is_bestseller")
