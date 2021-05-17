@@ -8,6 +8,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.*;
 
 
@@ -32,8 +33,8 @@ public class Book {
 
     @Column(name = "pub_date")
     @ApiModelProperty("date of book publication")
-    @Temporal(TemporalType.DATE)
-    private Date pubDate;
+//    @Temporal(TemporalType.TIMESTAMP)
+    private LocalDate pubDate;
 
     @Column(name = "is_bestseller")
     @ApiModelProperty("if isBestseller = 1 so the book is considered to be bestseller and if 0 the book is not a bestseller")
@@ -98,11 +99,11 @@ public class Book {
         this.title = title;
     }
 
-    public Date getPubDate() {
+    public LocalDate getPubDate() {
         return pubDate;
     }
 
-    public void setPubDate(Date pubDate) {
+    public void setPubDate(LocalDate pubDate) {
         this.pubDate = pubDate;
     }
 

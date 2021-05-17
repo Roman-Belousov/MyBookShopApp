@@ -7,6 +7,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 public interface BookRepository extends JpaRepository<Book, Integer> {
@@ -35,8 +37,14 @@ Page<Book> findBooksByTitleContaining(String bookTitle, Pageable nextPage);
 
 
     @Query(value = "SELECT * FROM books ORDER BY pub_date DESC", nativeQuery=true)
-    Page<Book> getBookWithRecentPubDate(Pageable nextPage);
+    Page<Book> findBooksByPubDate(Pageable nextPage);
 
+
+     Page<Book> findByPubDateBetweenOrderByPubDateDesc(Pageable nextPage, LocalDate fromdaterecent, LocalDate enddaterecent);
+
+
+//    @Query(value = "SELECT * FROM books ORDER BY pub_date DESC", nativeQuery=true)
+//    List<Book> findBooksByPubDate();
 
 
 }

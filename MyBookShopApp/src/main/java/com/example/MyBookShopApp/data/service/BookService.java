@@ -9,6 +9,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @Component
@@ -65,8 +67,22 @@ public class BookService {
 
     public Page<Book> getPageOfRecentBooks(Integer offset, Integer limit){
         Pageable nextPage = PageRequest.of(offset,limit);
-        return bookRepository.getBookWithRecentPubDate(nextPage);
+        return bookRepository.findBooksByPubDate(nextPage);
     }
+
+    public Page<Book> getPageOfRecentBooksBetween(Integer offset, Integer limit, LocalDate fromdaterecent, LocalDate enddaterecent){
+        Pageable nextPage = PageRequest.of(offset,limit);
+
+        return bookRepository.findByPubDateBetweenOrderByPubDateDesc(nextPage,fromdaterecent,enddaterecent);
+    }
+
+
+
+//    public List<Book> getPageOfRecentBooks(){
+//
+//        return bookRepository.findBooksByPubDate();
+//    }
+
 }
 
 

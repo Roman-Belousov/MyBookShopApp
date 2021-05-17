@@ -1,6 +1,7 @@
 package com.example.MyBookShopApp.controllers;
 
 import com.example.MyBookShopApp.data.BooksPageDto;
+import com.example.MyBookShopApp.data.SearchDateDto;
 import com.example.MyBookShopApp.data.SearchWordDto;
 import com.example.MyBookShopApp.data.dto.Book;
 import com.example.MyBookShopApp.data.service.BookService;
@@ -10,12 +11,14 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Controller
 public class MainPageController {
 
     private final BookService bookService;
+
 
     @Autowired
     public MainPageController(BookService bookService) {
@@ -80,11 +83,6 @@ public class MainPageController {
         return new BooksPageDto(bookService.getPageOfRecentBooks(offset,limit).getContent());
     }
 
-    @GetMapping("/recent")
-    public String recentPage() {
-
-        return "/books/recent";
-    }
 
     @GetMapping("/genres")
     public String genresPage() {
